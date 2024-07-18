@@ -1,68 +1,70 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     const slides = document.querySelectorAll('.slide');
-//     let slideIndex = 0;
-//     const totalSlides = slides.length;
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.slide');
+    let slideIndex = 0;
+    const totalSlides = slides.length;
 
-//     function showSlide(index) {
-//         slides.forEach(slide => {
-//             slide.style.display = 'none';
-//         });
+    function showSlide(index) {
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
 
-//         slides[index].style.display = 'block';
-//     }
-
-//     function nextSlide() {
-//         slideIndex = (slideIndex + 1) % totalSlides;
-//         showSlide(slideIndex);
-//     }
-
-//     function prevSlide() {
-//         slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
-//         showSlide(slideIndex);
-//     }
-
-//     setInterval(nextSlide, 5000);
-
-//     showSlide(slideIndex); // Mostrar o primeiro slide ao carregar a página
-
-//     const prevButton = document.querySelector('.prev-button');
-//     const nextButton = document.querySelector('.next-button');
-
-//     prevButton.addEventListener('click', prevSlide);
-//     nextButton.addEventListener('click', nextSlide);
-// });
-// const countdownElement = document.getElementById("countdown");
-
-// const countdownFunction = setInterval(function() {
-//     const now = new Date().getTime();
-//     const distance = countDownDate - now;
-
-//     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-//     countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-//     if (distance < 0) {
-//         clearInterval(countdownFunction);
-//         countdownElement.innerHTML = "EXPIRADO";
-//     }
-// }, 1000);
-
-function menuShow() {
-    let menuMobile = document.querySelector('.nav-links');
-
-    if (menuMobile.classList.contains('open')) {
-        menuMobile.classList.remove('open');
-       
-
-    } else {
-        menuMobile.classList.add('open')
-      
-
+        slides[index].style.display = 'block';
     }
 
-    console.log("test")
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % totalSlides;
+        showSlide(slideIndex);
+    }
+
+    function prevSlide() {
+        slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+        showSlide(slideIndex);
+    }
+
+    setInterval(nextSlide, 5000);
+
+    showSlide(slideIndex);
+
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+});
+const stopwatch = document.getElementById('stopwatch');
+const arrow = document.getElementById('arrow');
+const diaInaug = 18;
+const horaInaug = 21;
+
+function atualizarRelogioDigital() {
+    const dataHoraAtual = new Date();
+    const dataHoraInaug = new Date(dataHoraAtual.getFullYear(), dataHoraAtual.getMonth(), diaInaug, horaInaug, 0, 0, 0);
+
+    const diferenca = dataHoraInaug - dataHoraAtual;
+
+    if (diferenca > 0) {
+        const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+        const horaFormatada = `${dias} dias ${horas} horas ${minutos} minutos ${segundos} segundos`;
+
+        document.getElementById("relogio-digital").innerHTML = horaFormatada;
+    } else {
+        document.getElementById("relogio-digital").innerHTML = "A inauguração já ocorreu!";
+    }
 }
+
+function showAndHide() {
+    if (stopwatch.style.right === '-28%') {
+        stopwatch.style.right = '0px';
+        arrow.textContent = '>';
+    } else {
+        arrow.textContent = '<';
+        stopwatch.style.right = '-28%';
+    }
+}
+
+setInterval(atualizarRelogioDigital, 1000);
 

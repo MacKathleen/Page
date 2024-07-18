@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inauguração da Loja de Roupas</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <a href="indexMenu.html"></a>
-        <a href="styleMenu.css"></a>
 </head>
 
 <body>
@@ -19,9 +17,7 @@
             <div class="logo">
                 <img src="img/Lora/1.png" alt="Logo da Loja">
             </div>
-
         </div>
-
         <nav>
             <ul class="nav-links" id="file">
                 <li><a href="#home">Home</a></li>
@@ -32,9 +28,7 @@
                 <li><a href="indexFom.html">Novidades</a></li>
             </ul>
         </nav>
-
-        <a href="#" id="botao" onclick="toggleHamburguerMenu()" > <img src="img/Pomo/menu-aberto (2).png" alt=""></a>
-
+        <a href="#" id="botao" onclick="toggleHamburguerMenu()"> <img src="img/Pomo/menu-aberto (2).png" alt=""></a>
         <nav id="hamburguerMenu">
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -50,22 +44,28 @@
     <section id="promocoes" class="promocoes">
         <div class="container">
             <h2>Promoções</h2>
+            <button class="prev-button">
+                < </button>
+                    <div class="slider">
+                        <div class="slide">
+                            <img src="img/Pomo/Saldos.png" alt="Promoção 1">
+                        </div>
+                        <div class="slide">
+                            <img src="img/Pomo/Frete.png" alt="Promoção 2">
+                        </div>
+                        <div class="slide">
+                            <img src="img/Pomo/3.png" alt="Promoção 3">
+                        </div>
+                    </div>
+                    <button class="next-button"> > </button>
+        </div>
+    </section>
 
-            <div class="slider">
-
-                <div class="slide">
-                    <img src="img/Pomo/Saldos.png" alt="Promoção 1">
-                </div>
-
-                <div class="slide">
-                    <img src="img/Pomo/Frete.png" alt="Promoção 2">
-                </div>
-
-                <div class="slide">
-                    <img src="img/Pomo/3.png" alt="Promoção 3">
-
-                </div>
-            </div>
+    <!-- Cronômetro de Contagem Regressiva -->
+    <section id="contador" class="contador">
+        <div class="container">
+            <h2>Contagem Regressiva para a Inauguração</h2>
+            <div id="relogio-digital"></div>
         </div>
     </section>
 
@@ -77,80 +77,60 @@
                 para realçar a sua beleza e individualidade.</p>
         </div>
     </section>
-
     <section id="produtos" class="produtos">
         <div class="container">
             <h2>Nossos Produtos</h2>
             <div class="grid-produtos">
-
                 <div class="card-produto">
                     <img src="img/Pomo/3 (3).webp" alt="Produto 1">
                     <h3>Camiseta Comfort </h3>
                     <p> Em Algodão Estampa Out Of Office Cinza </p>
                     <p><b>R$ 59,90</b></p>
                 </div>
-
                 <div class="card-produto">
                     <img src="img/Pomo/3.webp" alt="Produto 2">
                     <h3>Blazer Slim </h3>
                     <p>Em Sarja Com Gola Lapela E Bolsos Marrom</p>
                     <p><b>R$ 259,90</b></p>
                 </div>
-
-                <div class="card-produto">
-                    <img src="img/Pomo/3 (4).webp" alt="Produto 3">
-                    <h3>Blazer Texturizado</h3>
-                    <p>Blazer Texturizado Com Botões E Bolsos Marrom</p>
-                    <p> <b> R$ 199,90 </b></p>
-                </div>
-
                 <div class="card-produto">
                     <img src="img/Pomo/3 (5).webp" alt="Produto 4">
                     <h3>Body Manga 3/4 Godê </h3>
                     <p>Em Tule Com Estampa Étnica E Floral Off White</p>
                     <p> <b> R$ 99,90</b></p>
                 </div>
-
                 <div class="card-produto">
                     <img src="img/Pomo/3 (6).webp" alt="Produto 5">
                     <h3>Vestido Em Tule</h3>
                     <p>Com Gola Alta E Camadas Na Saia Preto/ Marrom</p>
                     <p> <b> R$ 179,90 </b></p>
                 </div>
-
                 <div class="card-produto">
                     <img src="img/Pomo/3 (7).webp" alt="Produto 6">
                     <h3>Vestido Longo</h3>
                     <p>Vestido Longo Com Fio Metalizado E Estampa Floral Multicores</p>
                     <p> <b> R$ 199,90 </b></p>
                 </div>
-
                 <div class="card-produto">
                     <img src="img/Pomo/1.webp" alt="Promoção 1">
                     <h3>Vestido com Estampa </h3>
                     <p>Vestido Curto Em Linho Com Estampa Pássaros Tropicais Bege Creme.</p>
                     <p style="color: #FF0000"> <b>R$ 110,00</b></p>
                 </div>
-
                 <div class="card-produto">
                     <img src="img/Pomo/3 (2).webp" alt="Promoção 3">
                     <h3>Blazer Resinado </h3>
                     <p>Blazer Cropped Risca De Giz Com Botões Resinados Curve & Plus Size Preto.</p>
                     <p style="color: #FF0000"> <b>R$ 199,90</b></p>
                 </div>
-
                 <div class="card-produto">
                     <img src="img/Pomo/3 (1).webp" alt="Promoção 2">
                     <h3>Blazer em Crepe</h3>
                     <p>Blazer Alongado De Alfaiataria Em Crepe</p>
                     <p style="color: #FF0000"> <b>R$ 120,00</b></p>
-
                 </div>
-
             </div>
     </section>
-
-   
 
     <section id="sobre" class="sobre">
         <div class="container">
@@ -158,15 +138,6 @@
             <p> A Lora foi fundada com o objetivo de trazer uma nova perspectiva para o mundo da moda. Inspirados pela
                 diversidade e beleza das pessoas, criamos uma marca que valoriza a individualidade e a expressão
                 pessoal. Cada peça em nossa coleção é pensada para realçar a beleza única de quem a veste.
-    </section>
-
-  
-    <!-- Cronômetro de Contagem Regressiva -->
-    <section id="contador" class="contador">
-        <div class="container">
-            <h2>Contagem Regressiva para a Inauguração</h2>
-            <div id="countdown"></div>
-        </div>
     </section>
 
     <footer>
@@ -184,10 +155,6 @@
             </div>
         </div>
     </footer>
-
-
-    <script src="script.js"></script>
-    <script src="scriptMenu.js"></script>
 </body>
 
 </html>
