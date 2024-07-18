@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Lora", serif;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+}
+
+.logo {
+    float: left;
+    margin: px;
+}
+
+.logo img {
+
+    height: 50px;
+    margin-left: 20px;
+
+}
+
+nav {
+    float: right;
+}
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+
+}
+
+#hamburguerMenu {
+    display: none;
+}
+
+#botao {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #file {
+        display: none;
+    }
+
+    #botao {
+        display: block;
+    }
+
+
+    .mobile-menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu-icon.open {
+        display: block;
+        background-color: transparent;
+        border: none;
+    }
+
+    .nav-links-mobile {
+        display: none;
+        padding: 1.5rem 4rwm;
+    }
+
+}
+
+
+.bem-vindo {
+
+    background-color: #f4f4f4;
+    padding: 100px 0;
+    text-align: center;
+    font-family: "Lora", serif;
+    margin: 10px;
+}
+
+
+.sobre {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    /* Permitir rolagem horizontal */
+    scroll-snap-type: x mandatory;
+    /* Rolagem suave */
+}
+
+.slide {
+    margin: 20px;
+    flex: 0 0 auto;
+    /* Manter o tamanho original dos slides */
+    min-width: 100%;
+    /* Garantir que cada slide ocupe toda a largura */
+    scroll-snap-align: start;
+    /* Alinhar ao início do viewport ao rolar */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.slide img {
+    width: 100%;
+    /* Imagem ocupa toda a largura do slide */
+    height: 500px;
+    /* Altura fixa de 200px */
+    object-fit: cover;
+    /* Redimensionar imagem para cobrir todo o espaço */
+}
+
+.slide h3,
+.slide p {
+    margin: 10px 0;
+}
+
+/* Estilo opcional para o título */
+.slide h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.promocoes {
+    padding: 20px 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+/* Seção Produtos */
+.produtos {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card-produto {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-produto img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Formulário de Inscrição */
+.inscricao {
+    background-color: #f4f4f4;
+    padding: 80px 0;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Cronômetro de Contagem Regressiva */
+.contador {
+    background-color: #333;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#countdown {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.info-contato {
+    margin-bottom: 20px;
+}
+
+.redes-sociais a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.redes-sociais a:hover {
+
+    transform: scale(1.2);
+}
+
+.redes-sociais img {
+    width: 30px;
+}
+
+/* Media Queries */
