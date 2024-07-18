@@ -21,7 +21,6 @@
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [IDEs/Editores Utilizados](#ideseditores-utilizados)
 - [Instruções de Configuração e Execução](#instruções-de-configuração-e-execução)
-- [Funcionalidades Implementadas](#funcionalidades-implementadas)
 
 ---
 
